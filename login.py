@@ -7,7 +7,7 @@ def login():
     if userEntry.get() == "" or passEntry.get() == "":
         messagebox.showerror("Error", "Fields cannot be empty!")
     elif userEntry.get() == "Christian" and passEntry.get() == "1234":
-        messagebox.showinfo("Correct", "User Validated!")
+        messagebox.showinfo("Success", "Welcome!")
         window.destroy()
         import sms
 
@@ -44,7 +44,7 @@ passLabel.grid(row=2, column=0, pady=5)
 userEntry = Entry(loginFrame, bd=3)
 userEntry.grid(row=1, column=1, padx=10)
 
-passEntry = Entry(loginFrame, bd=3)
+passEntry = Entry(loginFrame, bd=3, show="*")
 passEntry.grid(row=2, column=1, padx=10)
 
 loginButton = Button(loginFrame, text="Login", font=("verdana", 10, "bold"), width=5,
